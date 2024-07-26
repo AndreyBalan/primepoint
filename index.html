@@ -4,7 +4,86 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page"></main>
+            <main class="page">
+                <section class="hero">
+                    <div class="hero__container">
+                        <div class="hero__img">
+                            <img src="@img/hero.png" alt="hero" />
+                        </div>
+                        <div class="hero__content">
+                            <h1 class="hero__title">PRIMEPOINT S.R.L</h1>
+                            <p class="hero__subtitle">
+                                "Precision in Translation, Expertise in Law, Excellence in
+                                Consulting."
+                            </p>
+                            <div class="hero__desc">
+                                <p class="hero__text text">
+                                    Welcome to PRIMEPOINT S.R.L., where we specialize in providing
+                                    top-notch translation, legal, and consulting services. Our
+                                    dedicated team of professionals is committed to delivering
+                                    precise and reliable solutions tailored to your unique needs. We
+                                    strive to bridge communication gaps, navigate complex legal
+                                    landscapes, and offer strategic consulting to empower your
+                                    business growth.
+                                </p>
+                                <a href="#" class="hero__btn btn">contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="fields">
+                    <div class="fields__container">
+                        <h2 class="fields__title title">Our Fields</h2>
+                        <div class="fields__wrapper">
+                            <div class="fields__item">
+                                <div class="fields__item-decor">1</div>
+                                <div class="fields__inner">
+                                    <h3 class="fields__item-title">Translation Services</h3>
+                                    <p class="fields__item-desc text">
+                                        At PRIMEPOINT S.R.L., we understand the importance of clear
+                                        and accurate communication. Our team of expert translators
+                                        offers comprehensive language solutions in various fields,
+                                        including legal, technical, medical, and business
+                                        translations. We ensure that your message is conveyed
+                                        accurately and culturally appropriately, no matter the
+                                        language or audience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="fields__item">
+                                <div class="fields__item-decor">2</div>
+                                <div class="fields__inner bg-purple">
+                                    <h3 class="fields__item-title">Legal Services</h3>
+                                    <p class="fields__item-desc text">
+                                        Navigating the legal system can be challenging, but with
+                                        PRIMEPOINT S.R.L., you have a trusted partner by your side.
+                                        Our experienced legal professionals provide a wide range of
+                                        services, including contract drafting, legal consultation,
+                                        and representation in court. We are dedicated to protecting
+                                        your interests and ensuring compliance with all applicable
+                                        laws and regulations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="fields__item">
+                                <div class="fields__item-decor">3</div>
+                                <div class="fields__inner bg-black white">
+                                    <h3 class="fields__item-title">Consulting Services</h3>
+                                    <p class="fields__item-desc text white">
+                                        Our consulting services are designed to help your business
+                                        thrive. Whether you need strategic planning, market
+                                        analysis, or operational efficiency improvements, our team
+                                        of consultants has the expertise to guide you. We work
+                                        closely with you to understand your goals and develop
+                                        tailored strategies that drive success and sustainable
+                                        growth.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
             @@include('html/_footer.htm',{})
         </div>
         @@include('html/_js.htm',{})

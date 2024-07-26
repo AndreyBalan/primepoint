@@ -1,4 +1,11 @@
 @font-face {
+	font-family: Lato;
+	font-display: swap;
+	src: url("../fonts/Lato-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
 	font-family: Montserrat;
 	font-display: swap;
 	src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
@@ -20,13 +27,6 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Montserrat;
-	font-display: swap;
-	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
 	font-family: MuseoModerno;
 	font-display: swap;
 	src: url("../fonts/MuseoModerno-Light.woff2") format("woff2");
@@ -34,17 +34,17 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Lato;
+	font-family: Montserrat;
 	font-display: swap;
-	src: url("../fonts/Lato-Regular.woff2") format("woff2");
+	src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: Montserrat;
 	font-display: swap;
-	src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
-	font-weight: 400;
+	src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {

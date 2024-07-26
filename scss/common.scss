@@ -29,9 +29,6 @@ input[type="search"]:focus {
 
 //
 
-body {
-    background-color: #f9f9f9;
-}
 // Помилки валідації
 .form__error {
     color: #db3d3d !important;
@@ -87,4 +84,32 @@ body {
 
 .white {
     color: #fff;
+}
+
+.btn {
+    padding: toRem(12) toRem(48);
+    color: $mainColor;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: toRem(48);
+    transition: all 0.3s;
+    max-height: toRem(48);
+    background: linear-gradient(38deg, rgba(223, 234, 254, 1) 9.78%, #d9cff0 93.44%);
+    @include adaptiveValue("font-size", 20, 16);
+    @media (any-hover: hover) {
+        &:hover {
+            background: linear-gradient(44deg, rgba(223, 234, 254, 1) 4.3%, #a799d2 67.46%);
+        }
+    }
+}
+
+.bg-purple {
+    background: linear-gradient(38deg, rgba(223, 234, 254, 1) 9.78%, #d9cff0 93.44%) !important;
+}
+
+.bg-black {
+    background: linear-gradient(225deg, #000 6.68%, #616161 100%) !important;
 }

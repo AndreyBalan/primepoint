@@ -1,3 +1,141 @@
 //====================================================================================================
+// hero
+.hero {
+    @include adaptiveValue("padding-bottom", 90, 32);
+    // .hero__container
+    &__container {
+    }
+    // .hero__img
+    &__img {
+    }
+    // .hero__content
+    &__content {
+    }
+    // .hero__title
+    &__title {
+        font-family: "Audiowide";
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: toRem(48);
+        @include adaptiveValue("font-size", 64, 26);
+    }
+    // .hero__subtitle
+    &__subtitle {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: toRem(16);
+        @include adaptiveValue("font-size", 20, 16);
+    }
+    // .hero__desc
+    &__desc {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(32);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .hero__text
+    &__text {
+        margin-top: toRem(32);
+        // max-width: toRem(800);
+        @include adaptiveValue("max-width", 800, 300);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+    }
+    // .hero__btn
+    &__btn {
+        display: block;
+    }
+}
+.text {
+}
+.btn {
+}
 
 //====================================================================================================
+// fields
+.fields {
+    @include adaptiveValue("padding-top", 90, 32);
+    @include adaptiveValue("padding-bottom", 90, 32);
+    // .fields__container
+    &__container {
+    }
+    // .fields__title
+    &__title {
+    }
+    // .fields__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: toRem(32);
+        @include adaptiveValue("margin-top", 80, 32);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+    // .fields__item
+    &__item {
+        position: relative;
+        border-top: 1px solid #a799d2;
+        @media (max-width: $tablet) {
+            margin-top: 0;
+            padding-left: toRem(48);
+            margin-left: toRem(24);
+            border-top: none;
+            border-left: 1px solid #a799d2;
+        }
+    }
+    // .fields__item-decor
+    &__item-decor {
+        background: #fff;
+        font-size: toRem(32);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        width: toRem(48);
+        height: toRem(48);
+        border-radius: 100%;
+        border: 1px solid #a799d2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: toRem(-24);
+        @media (max-width: $tablet) {
+            left: toRem(-24);
+            top: 0;
+        }
+    }
+    // .fields__inner
+    &__inner {
+        padding: toRem(24);
+        border-radius: toRem(32);
+        border: 1px solid #a799d2;
+        background: #fff;
+        margin-top: toRem(48);
+        @media (max-width: $tablet) {
+            margin-top: 0;
+        }
+    }
+    // .fields__item-title
+    &__item-title {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 20, 14);
+    }
+    // .fields__item-desc
+    &__item-desc {
+        @include adaptiveValue("margin-top", 24, 16);
+    }
+}
+.title {
+}
+.text {
+}
+
+//========================================================================================================================================================

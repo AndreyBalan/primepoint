@@ -111,5 +111,11 @@ input[type="search"]:focus {
 }
 
 .bg-black {
+    border: 1px solid #000 !important;
     background: linear-gradient(225deg, #000 6.68%, #616161 100%) !important;
+}
+
+.no-border {
+    border: none !important;
+    padding: toRem(0) !important;
 }

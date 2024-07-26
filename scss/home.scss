@@ -180,6 +180,9 @@
     &__item {
         &:nth-child(5) {
             grid-column: span 2 / span 2;
+            @media (max-width: $mobile) {
+                grid-column: span 1 / span 1;
+            }
         }
     }
     // .fields__item-decor
@@ -348,4 +351,85 @@
     border-radius: 100%;
     border: 1px solid $mainColor;
 }
+//========================================================================================================================================================
+// slients
+.clients {
+    @include adaptiveValue("padding-top", 90, 32);
+    @include adaptiveValue("padding-bottom", 90, 32);
+    // .clients__container
+    &__container {
+    }
+    // .clients__wrapper
+    &__wrapper {
+        display: flex;
+        // justify-content: space-around;
+        margin-top: toRem(80);
+        gap: toRem(80);
+    }
+    // .clients__title
+    &__title {
+    }
+    // .clients__content
+    &__content {
+        max-width: toRem(662);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+        @media (max-width: $tablet) {
+            border-radius: 32px;
+            border: 1px solid varrgba(223, 234, 254, 1);
+        }
+    }
+    // .clients__item-wrapper
+    &__item-wrapper {
+        border: 1px solid rgba(223, 234, 254, 1);
+        border-radius: toRem(32);
+        @media (max-width: $tablet) {
+            border: 1px solid #d9cff0;
+        }
+        @media (max-width: $mobile) {
+            border: none;
+        }
+    }
+    // .clients__item-img
+    &__item-img {
+        max-width: toRem(369);
+    }
+    // .clients__item_content
+    &__item_content {
+        border-radius: toRem(32);
+        padding: toRem(32);
+        display: flex;
+
+        @include adaptiveValue("gap", 32, 12);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            border: 1px solid rgba(223, 234, 254, 1);
+            margin-top: toRem(20);
+        }
+    }
+    // .clients__item-title
+    &__item-title {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 20, 14);
+    }
+    // .clients__item-text
+    &__item-text {
+        @include adaptiveValue("margin-top", 23, 8);
+    }
+    // .clients__img
+    &__img {
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
+.title {
+}
+
 //========================================================================================================================================================

@@ -119,3 +119,9 @@ input[type="search"]:focus {
     border: none !important;
     padding: toRem(0) !important;
 }
+
+.tal {
+    @media (max-width: $mobile) {
+        text-align: left;
+    }
+}

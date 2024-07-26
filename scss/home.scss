@@ -249,3 +249,103 @@
 }
 
 //========================================================================================================================================================
+// advantages
+.advantages {
+    @include adaptiveValue("padding-top", 90, 32);
+    @include adaptiveValue("padding-bottom", 90, 32);
+
+    // .advantages__container
+    &__container {
+        position: relative;
+    }
+    // .advantages__title
+    &__title {
+    }
+    // .advantages__wrapper-main
+    &__wrapper-main {
+        // gap: toRem(32);
+
+        @include adaptiveValue("margin-top", 80, 32);
+    }
+    // .advantages__slider
+    &__slider {
+    }
+    // .advantages__wrapper
+    &__wrapper {
+        gap: 0;
+        align-items: center;
+    }
+    // .advantages__slide
+    &__slide {
+        border-radius: toRem(32);
+        padding: toRem(32) toRem(24);
+        border: 1px solid #a799d2;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    &__btns {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+.title {
+}
+.swiper {
+}
+.swiper-gap {
+    gap: toRem(12);
+}
+.swiper-slide {
+}
+.slide {
+    // .slide__title
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 20, 14);
+        @include adaptiveValue("margin-top", 24, 12);
+    }
+    // .slide__text
+    &__text {
+        @include adaptiveValue("margin-top", 24, 12);
+    }
+}
+.swiper-button-prev {
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #d9cff0;
+        }
+    }
+}
+.swiper-button-next {
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+        &:hover {
+            background: #d9cff0;
+        }
+    }
+}
+
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.advantages__btns {
+    display: flex;
+    gap: toRem(24);
+}
+.swiper-button {
+    width: toRem(48);
+    height: toRem(48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid $mainColor;
+}
+//========================================================================================================================================================

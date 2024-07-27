@@ -56,6 +56,7 @@
     // .hero__btn
     &__btn {
         display: block;
+        align-self: flex-end;
     }
 }
 .text {
@@ -124,8 +125,10 @@
         border: 1px solid #a799d2;
         background: #fff;
         margin-top: toRem(48);
+        height: 90%;
         @media (max-width: $tablet) {
             margin-top: 0;
+            height: 100%;
         }
     }
     // .fields__item-title
@@ -245,11 +248,19 @@
                 display: block;
                 width: 100%;
             }
+            @media (max-width: $mobile) {
+                display: none;
+            }
         }
         &:nth-child(2) {
             display: block;
             @media (max-width: $tablet) {
                 display: none;
+            }
+            @media (max-width: $mobile) {
+                display: block;
+                width: 100%;
+                max-height: toRem(160);
             }
         }
     }
@@ -391,6 +402,10 @@
     &__item-wrapper {
         border: 1px solid rgba(223, 234, 254, 1);
         border-radius: toRem(32);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         @media (max-width: $tablet) {
             border: 1px solid #d9cff0;
         }
@@ -466,7 +481,7 @@
     }
     // .contact__map
     &__map {
-        max-width: 100%;
+        max-width: toRem(662);
         width: 100%;
         @media (max-width: $tablet) {
             width: 100%;
@@ -486,6 +501,7 @@
     }
     // .contact__content
     &__content {
+        max-width: toRem(369);
         width: 100%;
         @media (max-width: $tablet) {
             width: 100%;
@@ -515,7 +531,7 @@
     &__item {
         display: flex;
         // width: toRem(662);
-        gap: toRem(16);
+        gap: toRem(8);
         margin-top: toRem(12);
     }
     &__btn {

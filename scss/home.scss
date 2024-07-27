@@ -300,9 +300,11 @@
         border-radius: toRem(32);
         padding: toRem(32) toRem(24);
         border: 1px solid #a799d2;
+
         height: 100%;
         img {
             width: 100%;
+            max-height: 100%;
         }
     }
     &__btns {
@@ -349,6 +351,11 @@
         &:hover {
             background: #d9cff0;
         }
+    }
+}
+.swiper-wrapper {
+    @media (max-width: $mobile) {
+        gap: 0 !important;
     }
 }
 

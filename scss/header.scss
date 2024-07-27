@@ -43,6 +43,8 @@
         justify-content: center;
         gap: toRem(40);
         border-radius: toRem(64);
+        z-index: 6;
+        @include adaptiveValue("height", 72, 40);
         @include adaptiveValue("padding-top", 12, 8);
         @include adaptiveValue("padding-bottom", 12, 8);
         @include adaptiveValue("padding-left", 34, 8);
@@ -53,6 +55,11 @@
         display: flex;
         gap: toRem(10);
         margin-left: toRem(60);
+        @media (max-width: $tablet) {
+            position: absolute;
+            right: toRem(88);
+            z-index: 6;
+        }
         a {
             font-family: "MuseoModerno";
             font-style: normal;
@@ -128,6 +135,10 @@
     }
     // .menu__icon
     &__icon {
+        @media (max-width: $tablet) {
+            position: absolute;
+            right: toRem(32);
+        }
     }
 }
 
@@ -142,5 +153,8 @@
     @media (max-width: $tablet) {
         display: block;
         max-width: toRem(136);
+        position: absolute;
+        left: toRem(32);
+        z-index: 6;
     }
 }

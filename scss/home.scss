@@ -359,6 +359,9 @@
 .advantages__btns {
     display: flex;
     gap: toRem(24);
+    @media (max-width: $tablet) {
+        display: none;
+    }
 }
 .swiper-button {
     width: toRem(48);
@@ -368,6 +371,57 @@
     align-items: center;
     border-radius: 100%;
     border: 1px solid $mainColor;
+}
+
+.swiper-scrollbar {
+    display: none;
+    margin-top: toRem(20);
+    border-radius: 10px;
+    position: relative;
+    -ms-touch-action: none;
+    border-radius: 4px;
+    background: linear-gradient(38deg, rgba(223, 234, 254, 1) 9.78%, #d9cff0 93.44%);
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}
+.swiper-horizontal > .swiper-scrollbar {
+    position: absolute;
+    left: 1%;
+    bottom: toRem(-24);
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+.swiper-vertical > .swiper-scrollbar {
+    position: absolute;
+    right: 3px;
+    top: 1%;
+    z-index: 50;
+    width: 5px;
+    height: 98%;
+}
+.swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    background: #a799d2;
+}
+.swiper-scrollbar-cursor-drag {
+    cursor: move;
+}
+.swiper-scrollbar-lock {
+    display: none;
+}
+
+.swiper-autoheight .swiper-wrapper {
+    @media (max-width: $mobile) {
+        gap: 0;
+    }
 }
 //========================================================================================================================================================
 // slients
@@ -477,6 +531,9 @@
         }
         @media (max-width: $tablet) {
             flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 0;
         }
     }
     // .contact__map
@@ -486,7 +543,6 @@
         @media (max-width: $tablet) {
             width: 100%;
         }
-
         iframe {
             border-radius: 32px;
             width: 100%;
@@ -496,6 +552,7 @@
             @media (max-width: $tablet) {
                 max-width: 100%;
                 width: 100%;
+                margin-top: toRem(32);
             }
         }
     }
@@ -519,6 +576,7 @@
         display: flex;
         gap: toRem(1);
         max-width: toRem(700);
+        text-align: left;
     }
     &__subtitle {
         font-family: "Audiowide";
@@ -535,7 +593,10 @@
         margin-top: toRem(12);
     }
     &__btn {
-        @include adaptiveValue("margin-top", 150, 32);
+        margin-top: toRem(150);
+        @media (max-width: $tablet) {
+            margin-top: toRem(48);
+        }
     }
 }
 .title {

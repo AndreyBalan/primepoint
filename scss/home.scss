@@ -1,12 +1,19 @@
 //====================================================================================================
 // hero
 .hero {
+    margin-top: toRem(-100);
     @include adaptiveValue("padding-bottom", 90, 32);
+    @media (max-width: $tablet) {
+        margin-top: toRem(-20);
+    }
     // .hero__container
     &__container {
     }
     // .hero__img
     &__img {
+        img {
+            max-width: 100%;
+        }
     }
     // .hero__content
     &__content {
@@ -275,7 +282,6 @@
     }
     // .advantages__wrapper
     &__wrapper {
-        gap: 0;
         align-items: center;
     }
     // .advantages__slide
@@ -299,9 +305,10 @@
 .swiper {
 }
 .swiper-gap {
-    gap: toRem(12);
+    gap: toRem(30);
 }
 .swiper-slide {
+    margin: 0 !important;
 }
 .slide {
     // .slide__title
@@ -363,8 +370,8 @@
     &__wrapper {
         display: flex;
         // justify-content: space-around;
-        margin-top: toRem(80);
         gap: toRem(80);
+        @include adaptiveValue("margin-top", 80, 32);
     }
     // .clients__title
     &__title {
@@ -430,6 +437,142 @@
     }
 }
 .title {
+}
+
+//========================================================================================================================================================
+
+// contact
+.contact {
+    @include adaptiveValue("padding-top", 90, 32);
+    @include adaptiveValue("padding-bottom", 180, 64);
+    // .contact__container
+    &__container {
+    }
+    // .contact__wrapper
+    &__wrapper {
+        display: flex;
+        max-width: 100%;
+        gap: toRem(20);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+        @include adaptiveValue("gap", 140, 0);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .contact__map
+    &__map {
+        max-width: 100%;
+        width: 100%;
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        iframe {
+            border-radius: 32px;
+            width: 100%;
+            max-width: toRem(662);
+            // height: 100%;
+
+            @media (max-width: $tablet) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    // .contact__content
+    &__content {
+        width: 100%;
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+    // .contact__title
+    &__title {
+    }
+    // .contact__desct
+    &__desct {
+        margin-top: toRem(24);
+    }
+    // .contact__address
+    &__address {
+        display: flex;
+        gap: toRem(1);
+        max-width: toRem(700);
+    }
+    &__subtitle {
+        font-family: "Audiowide";
+        font-size: 24px;
+        margin-top: toRem(32);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__item {
+        display: flex;
+        // width: toRem(662);
+        gap: toRem(16);
+        margin-top: toRem(12);
+    }
+    &__btn {
+        @include adaptiveValue("margin-top", 150, 32);
+    }
+}
+.title {
+}
+.text {
+}
+
+//========================================================================================================================================================
+// form
+.contact {
+    // .contact__form
+    &__form {
+        margin-top: toRem(48);
+    }
+}
+.sr-only {
+}
+.form-btn {
+}
+.cta {
+}
+form {
+    @media (max-width: $tablet) {
+        text-align: center;
+        align-items: center;
+        @media (max-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    input {
+        padding: 8px 16px;
+        border-radius: 24px;
+        border: 1px solid #a799d2;
+        margin-top: toRem(24);
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+        &:first-child {
+            margin-top: toRem(0);
+        }
+        @media (max-width: $tablet) {
+            justify-content: center;
+            text-align: center;
+            width: toRem(320);
+        }
+    }
+    button {
+        margin-top: toRem(100);
+    }
 }
 
 //========================================================================================================================================================

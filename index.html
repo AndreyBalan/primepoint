@@ -3,7 +3,7 @@
     @@include('html/_head.htm',{ "title":"PRIMEPOINT S.R.L | Main Page" })
     <body>
         <div class="wrapper">
-            @@include('html/_header.htm',{})
+            @@include('html/_popup.htm',{}) @@include('html/_header.htm',{})
             <main class="page">
                 <section class="hero">
                     <div class="hero__container">
@@ -26,7 +26,9 @@
                                     landscapes, and offer strategic consulting to empower your
                                     business growth.
                                 </p>
-                                <a href="#" class="hero__btn btn">contact us</a>
+                                <a href="#" class="hero__btn btn" data-goto=".contact"
+                                    >contact us</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -188,7 +190,7 @@
                                             outcomes.
                                         </p>
                                     </div>
-                                    <div class="advantages__slide swiper-slide bgl-black">
+                                    <div class="advantages__slide swiper-slide bg-black">
                                         <img src="@img/client.png" alt="client" />
                                         <h3 class="slide__title white">Client-Centric Approach</h3>
                                         <p class="slide__text text white">
@@ -268,6 +270,83 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section class="contact">
+                    <div class="contact__container">
+                        <div class="contact__wrapper">
+                            <div class="contact__map">
+                                <div class="contact__map-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.7989270611765!2d26.108676495672768!3d44.43728662679391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff30b0a28dd1%3A0x1c11949b56721a65!2zQ0FNRVJBIDQsIENhbGVhIE1vyJlpbG9yIDE1OCwgQnVjdXJlyJl0aSAwMzAxNjcsINCg0YPQvNGL0L3QuNGP!5e0!3m2!1sru!2sua!4v1722001689913!5m2!1sru!2sua"
+                                        width="600"
+                                        height="450"
+                                        style="border: 0"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        title="address"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                                <div class="contact__map-info">
+                                    <h3 class="contact__subtitle">Address:</h3>
+                                    <div class="contact__item">
+                                        <img src="@img/location.svg" alt="loc" />
+                                        <p class="contact__address text">
+                                            Bucuresti Sector 2, Calea MOSILOR, Nr. 158, CAMERA 4,
+                                            MODULE 296, 4th Floor
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact__content" data-da=".contact__wrapper, 768, 0">
+                                <h2 class="contact__title title">Get in touch</h2>
+                                <p class="contact__desct text">
+                                    Leave your message and we'll get back to you shortly
+                                </p>
+                                <form
+                                    data-da=".contact__wrapper, 991, 0"
+                                    class="contact__form"
+                                    action="files/sendmail/sendmail.php"
+                                    method="POST"
+                                    data-popup-message="#form-message"
+                                    data-dev>
+                                    <div>
+                                        <label for="email" class="sr-only">Your Email</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            data-required="email"
+                                            data-error="Incorrect email"
+                                            placeholder="Your Email" />
+                                    </div>
+                                    <div>
+                                        <label for="name" class="sr-only">Your Full Name</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            data-error="Incorrect name"
+                                            data-required
+                                            placeholder="Your Full Name" />
+                                    </div>
+
+                                    <div>
+                                        <label for="phone" class="sr-only">Your Phone</label>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder="Your Phone" />
+                                    </div>
+
+                                    <button class="form-btn btn contact__btn" type="submit">
+                                        SEND
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="contact__address"></div>
                     </div>
                 </section>
             </main>

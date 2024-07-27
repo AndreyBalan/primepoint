@@ -1,18 +1,18 @@
 .header {
-    border-radius: toRem(64);
-    background: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    @include adaptiveValue("padding-top", 12, 8);
-    @include adaptiveValue("padding-bottom", 12, 8);
-    @include adaptiveValue("min-width", 1080, 252);
-    @include adaptiveValue("top", 24, 12);
+    // border-radius: toRem(64);
+    // background: #fff;
+    // position: absolute;
+    min-width: 100%;
+    width: 100%;
     &__logo {
         margin-left: toRem(80);
         margin-right: toRem(80);
+        margin-top: toRem(0);
         @include adaptiveValue("margin-left", 40, 0);
         @include adaptiveValue("margin-right", 40, 0);
+        @media (max-width: $tablet) {
+            margin: 0;
+        }
         @media (max-width: $tablet) {
             margin: 0;
         }
@@ -21,22 +21,38 @@
     &__container {
         max-width: toRem(1160);
         width: 100%;
+        position: relative;
         margin: 0 auto;
+        // background: #fff;
+        border-radius: toRem(64);
+        @include adaptiveValue("width", 1080, 252);
+        @include adaptiveValue("padding-top", 12, 8);
+        @include adaptiveValue("padding-bottom", 12, 8);
+        @include adaptiveValue("max-width", 1080, 252);
+        @include adaptiveValue("top", 24, 12);
     }
     // .header__menu
     &__menu {
+        width: 100%;
         display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: toRem(40);
-        // @include adaptiveValue("padding-top", 16, 8);
-        // @include adaptiveValue("padding-bottom", 16, 8);
+        border-radius: toRem(64);
+        @include adaptiveValue("padding-top", 12, 8);
+        @include adaptiveValue("padding-bottom", 12, 8);
+        @include adaptiveValue("padding-left", 34, 8);
+        @include adaptiveValue("padding-right", 34, 8);
     }
     // .header__lang
     &__lang {
         display: flex;
         gap: toRem(10);
-        margin-left: toRem(100);
+        margin-left: toRem(60);
         a {
             font-family: "MuseoModerno";
             font-style: normal;
@@ -89,9 +105,13 @@
             flex-direction: column;
             align-items: flex-start;
         }
+        @media (max-width: $tablet) {
+            gap: toRem(24);
+        }
     }
     // .menu__item
     &__item {
+        list-style: none !important;
     }
     // .menu__link
     &__link {
@@ -110,5 +130,17 @@
     &__icon {
     }
 }
-.icon-menu {
+
+.logo__lg {
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.logo__md {
+    display: none;
+    @media (max-width: $tablet) {
+        display: block;
+        max-width: toRem(136);
+    }
 }
